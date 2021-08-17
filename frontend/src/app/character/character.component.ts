@@ -8,15 +8,23 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CharacterComponent implements OnInit {
   @Output() sendPoint = new EventEmitter();
 
-  NumberOfPoint: any = 0;
+  @Output() sendMove = new EventEmitter();
+
+  NumberOfPoint: number = 0;
+
   ValueOfClick: number = 1;
 
   constructor() {}
 
   ClickToCharacter() {
     this.NumberOfPoint += this.ValueOfClick;
-    // console.log(this.NumberOfPoint)
+
+    // console.log(this.NumberOfPoint);
     this.sendPoint.emit(this.NumberOfPoint);
+
+    if (this.NumberOfPoint == 10) {
+      this.sendMove.emit(true);
+    }
   }
 
   ngOnInit(): void {}

@@ -10,6 +10,12 @@ export class HomeComponent implements OnInit {
 
   constructor() {}
 
+
+  effect(e: any) {
+    let body = document.getElementsByClassName('characters-img')[0];
+    body.classList.add('move');
+  }
+
   ngOnInit(): void {}
 
   Point(e: any) {
