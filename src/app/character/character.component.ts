@@ -3,7 +3,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  styleUrls: ['./character.component.css'],
 })
 export class CharacterComponent implements OnInit {
   @Output() sendPoint = new EventEmitter();
@@ -11,17 +11,13 @@ export class CharacterComponent implements OnInit {
   NumberOfPoint: any = 0;
   ValueOfClick: number = 1;
 
-  constructor() { }
+  constructor() {}
 
   ClickToCharacter() {
     this.NumberOfPoint += this.ValueOfClick;
     // console.log(this.NumberOfPoint)
     this.sendPoint.emit(this.NumberOfPoint);
-
   }
 
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void {}
 }
