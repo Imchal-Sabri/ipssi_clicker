@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ipssi_clicker
+      MYSQL_USER: john_snow
+      MYSQL_PASSWORD: taboulaficha
+    ports:
+      - "33061:3306"
