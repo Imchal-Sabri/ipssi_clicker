@@ -14,3 +14,7 @@ html {
   font-family: "pixelfont";
   src: url("assets/Minecraft.ttf");
 }
+
+.clicker-img {
+  cursor: pointer;
+}
